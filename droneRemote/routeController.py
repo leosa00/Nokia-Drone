@@ -44,11 +44,16 @@ def receiveTelemetry():
 def allDrones():
     return render_template('drones.html', data = data.drone)
 
-#@app.route('/drone/<id>')
-#def drone():
-#    for x in data.droneTelemetry:
         
-
+@app.route('/drone/<droneID>')
+def droneData(droneID):
+    telemetry, bool = droneCont.findDroneByID(droneID)
+    if not (bool):
+        return render_template('drone.html',data = bool)
+    else:
+        return render_template('drone.html',data = telemetry)
+    
+    
 
 @app.route('/test', methods = ['GET'])
 def test():

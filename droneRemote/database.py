@@ -1,14 +1,14 @@
 drone = [{
-    "droneID":"",
-    "name":"",
-    "description":"",
-    "address":"",
-    "tpm2":"",
+    "droneID":"test",
+    "name":"test",
+    "description":"test",
+    "address":"test",
+    "tpm2":"test",
 }
 ]
 droneTelemetry = [{
-    "droneID":"",
-    "longitude":"",
-    "latitude":"",
-    "altitude":"",
+    "droneID":"test",
+    "longitude":"test2",
+    "latitude":"test2",
+    "altitude":"test2",
 }]

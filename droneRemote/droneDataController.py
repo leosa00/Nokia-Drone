@@ -6,6 +6,12 @@ import attestController as att
 import expectedValueController as ex
 import attestVerifyController as ver
 
+def findDroneByID(droneID):
+    for x in data.droneTelemetry:
+            if (x['droneID'] == droneID):
+                return x, True
+    return "could not find drone",False
+
 
 def createAttElement(ipaddr,device, name, description, tag):
     el.ekExtract(device)

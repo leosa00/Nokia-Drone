@@ -31,26 +31,26 @@
     </style>
 </head>
 
-    <h1>Drone Database </h1>
-    <table> 
-        <tr>
-            <th>DroneID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Address</th>
-            <th>Ip Address</th>
+    <h1>Most recent drone telemetry</h1>
+    {% if(data == false) %}
+        <p> Telemetry for this drone was not found :(</p>
+    {% else %}
+        <table> 
+            <tr>
+                <th>DroneID</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Altitude</th>
+            
         
-        </tr>
-        {% for item in data %}
-        <tr>
+            </tr>
+                <tr>
             
-        <td><a href = "/drone/{{item.droneID}}">{{item.droneID}}</a></td>
-            <td>{{item.name}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.address}}</td>
-            <td>{{item.tpm2}}</td>
+                <td>{{data.droneID}}</td>
+                <td>{{data.longitude}}</td>
+                <td>{{data.latitude}}</td>
+                <td>{{data.altitude}}</td>
             
-        </tr>
-        {% endfor %}
-    </table>
-
+            </tr>
+        </table>
+    {% endif %}
