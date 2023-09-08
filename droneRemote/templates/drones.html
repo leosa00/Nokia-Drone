@@ -1,0 +1,56 @@
+<head>
+    <title>Your Page Title</title>
+    <style>
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid rgb(14, 13, 14);
+        }
+
+        thead th:nth-child(1) {
+            width: 30%;
+        }
+
+        thead th:nth-child(2) {
+            width: 20%;
+        }
+
+        thead th:nth-child(3) {
+            width: 15%;
+        }
+
+        thead th:nth-child(4) {
+            width: 35%;
+        }
+
+        th,
+        td {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+    <h1>Drone Database </h1>
+    <table> 
+        <tr>
+            <th>DroneID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+            <th>Ip Address</th>
+        
+        </tr>
+        {% for item in data %}
+        <tr>
+            
+            <td>{{item.droneID}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.tpm2}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+
